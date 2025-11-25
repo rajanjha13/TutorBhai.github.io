@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - TutorBhai</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: { 50: '#f0f9ff', 100: '#e0f2fe', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 900: '#0c4a6e' }
+            },
+            fontFamily: { sans: ['Inter', 'sans-serif'] }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+              <div class="bg-brand-600 p-2 rounded-lg group-hover:bg-brand-700 transition-colors">
+                <i data-lucide="book-open" class="text-white w-6 h-6"></i>
+              </div>
+              <span class="text-2xl font-bold text-gray-900 tracking-tight">Tutor<span class="text-brand-600">Bhai</span></span>
+            </a>
+          </div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-brand-600">Home</a>
+            <a href="index.html#features" class="text-sm font-medium text-gray-600 hover:text-brand-600">LMS Features</a>
+            <a href="services.html" class="text-sm font-medium text-brand-600">Services</a>
+            <a href="index.html#pricing" class="text-sm font-medium text-gray-600 hover:text-brand-600">Pricing</a>
+            <a href="contact.html" class="text-sm font-medium text-gray-600 hover:text-brand-600">Contact</a>
+            <a href="contact.html" class="bg-brand-600 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-brand-700 transition-all shadow-md">Get Free Demo</a>
+          </div>
+          <div class="flex items-center md:hidden">
+            <button id="mobile-menu-btn" class="text-gray-500 p-2"><i data-lucide="menu" class="w-6 h-6"></i></button>
+          </div>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-brand-600 hover:bg-gray-50">Home</a>
+          <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium text-brand-600 bg-brand-50">Services</a>
+          <a href="contact.html" class="block w-full text-center mt-4 bg-brand-600 text-white px-5 py-3 rounded-lg text-base font-medium">Get Free Demo</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="pt-10 pb-20 flex-grow">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+           <h1 class="text-4xl font-bold text-gray-900 mb-4">Our Premium Services</h1>
+           <p class="text-xl text-gray-600">Comprehensive solutions designed specifically for educators, coaching institutes, and content creators.</p>
+        </div>
+
+        <!-- Service Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <!-- LMS -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 flex flex-col">
+                <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-blue-50 text-blue-600">
+                   <i data-lucide="smartphone" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">White-Label LMS App</h3>
+                <p class="text-gray-600 mb-6 flex-grow">Your own branded academy app on Android, iOS, and Windows. Keep 100% of your earnings.</p>
+                <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Android + iOS + Web</li>
+                    <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Secure Live Classes</li>
+                </ul>
+            </div>
+            <!-- Graphic Designing -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 flex flex-col">
+                <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-pink-50 text-pink-600">
+                   <i data-lucide="palette" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Graphic Designing</h3>
+                <p class="text-gray-600 mb-6 flex-grow">Premium visuals for your institute. From high-CTR YouTube thumbnails to posters.</p>
+                <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> YouTube Thumbnails</li>
+                    <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Social Media Kits</li>
+                </ul>
+            </div>
+            <!-- Marketing -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 flex flex-col">
+                <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-orange-50 text-orange-600">
+                   <i data-lucide="megaphone" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Digital Marketing</h3>
+                <p class="text-gray-600 mb-6 flex-grow">Scale your institute with targeted Facebook & Google Ads.</p>
+                <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Lead Generation</li>
+                    <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Ad Campaign Setup</li>
+                </ul>
+            </div>
+            <!-- YouTube -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 flex flex-col">
+                <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-red-50 text-red-600">
+                   <i data-lucide="youtube" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">YouTube Management</h3>
+                <p class="text-gray-600 mb-6 flex-grow">Grow your subscriber base with professional editing and SEO.</p>
+                <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Video Editing</li>
+                    <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Channel SEO</li>
+                </ul>
+            </div>
+            <!-- Studio -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 flex flex-col">
+                <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-purple-50 text-purple-600">
+                   <i data-lucide="mic-2" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">Studio Setup</h3>
+                <p class="text-gray-600 mb-6 flex-grow">Transform your classroom into a high-tech hybrid studio.</p>
+                <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> 4K Camera Setup</li>
+                    <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Acoustic Treatment</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Detailed Section: Studio -->
+        <div class="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 mb-12">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Hybrid Class Studio Setup</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Don't just teach online; provide a broadcast-quality experience. Our team visits your location to analyze acoustics and lighting needs. We provide a turnkey solution including:
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3"><span class="h-2 w-2 bg-brand-500 rounded-full"></span><span class="text-gray-700">Digital Smart Boards (65" to 86")</span></li>
+                        <li class="flex items-center gap-3"><span class="h-2 w-2 bg-brand-500 rounded-full"></span><span class="text-gray-700">Professional PTZ 4K Cameras</span></li>
+                        <li class="flex items-center gap-3"><span class="h-2 w-2 bg-brand-500 rounded-full"></span><span class="text-gray-700">Studio-grade Sennheiser/Rode Microphones</span></li>
+                        <li class="flex items-center gap-3"><span class="h-2 w-2 bg-brand-500 rounded-full"></span><span class="text-gray-700">Server Setup for low-latency streaming</span></li>
+                    </ul>
+                    <a href="contact.html" class="text-brand-600 font-bold hover:text-brand-700 inline-flex items-center gap-1">Get a Studio Quote <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                </div>
+                <div class="rounded-2xl overflow-hidden h-[400px]">
+                    <img src="https://images.unsplash.com/photo-1598550476439-cce8bd2deb1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Professional Studio Setup" class="w-full h-full object-cover" />
+                </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="text-center text-sm text-gray-500">&copy; 2024 TutorBhai. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+      lucide.createIcons();
+      document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+      });
+    </script>
+</body>
+</html>
