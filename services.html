@@ -3,161 +3,251 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Services - TutorBhai</title>
+    <title>Services & Pricing - TutorBhai</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              brand: { 50: '#f0f9ff', 100: '#e0f2fe', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 900: '#0c4a6e' }
+              brand: { 50: '#f0f9ff', 100: '#e0f2fe', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e' }
             },
             fontFamily: { sans: ['Inter', 'sans-serif'] }
           }
         }
       }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>body { font-family: 'Inter', sans-serif; }</style>
 </head>
 <body class="bg-gray-50 flex flex-col min-h-screen">
 
-    <!-- Navbar -->
-    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
+    <!-- Navbar (Consistent) -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm transition-all duration-300">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
+        <div class="flex justify-between h-20">
           <div class="flex items-center">
-            <a href="index.html" class="flex items-center gap-2 group">
-              <div class="bg-brand-600 p-2 rounded-lg group-hover:bg-brand-700 transition-colors">
-                <i data-lucide="book-open" class="text-white w-6 h-6"></i>
+            <a href="index.html" class="flex items-center gap-3 group">
+              <div class="bg-brand-600 p-2.5 rounded-xl group-hover:shadow-lg transition-all">
+                <i data-lucide="book-open" class="text-white w-7 h-7"></i>
               </div>
-              <span class="text-2xl font-bold text-gray-900 tracking-tight">Tutor<span class="text-brand-600">Bhai</span></span>
+              <div class="flex flex-col">
+                <span class="text-2xl font-bold text-gray-900 tracking-tight leading-none">Tutor<span class="text-brand-600">Bhai</span></span>
+                <span class="text-[10px] text-gray-500 font-medium tracking-wide uppercase">Educator Solutions</span>
+              </div>
             </a>
           </div>
           <div class="hidden md:flex items-center space-x-8">
             <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-brand-600">Home</a>
             <a href="index.html#features" class="text-sm font-medium text-gray-600 hover:text-brand-600">LMS Features</a>
-            <a href="services.html" class="text-sm font-medium text-brand-600">Services</a>
+            <a href="services.html" class="text-sm font-bold text-brand-600">Services</a>
             <a href="index.html#pricing" class="text-sm font-medium text-gray-600 hover:text-brand-600">Pricing</a>
             <a href="contact.html" class="text-sm font-medium text-gray-600 hover:text-brand-600">Contact</a>
-            <a href="contact.html" class="bg-brand-600 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-brand-700 transition-all shadow-md">Get Free Demo</a>
+            <a href="contact.html" class="bg-brand-600 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-brand-700 shadow-md">Get Free Demo</a>
           </div>
           <div class="flex items-center md:hidden">
-            <button id="mobile-menu-btn" class="text-gray-500 p-2"><i data-lucide="menu" class="w-6 h-6"></i></button>
+            <button id="mobile-menu-btn" class="text-gray-500 p-2"><i data-lucide="menu" class="w-8 h-8"></i></button>
           </div>
         </div>
       </div>
-      <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-brand-600 hover:bg-gray-50">Home</a>
-          <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium text-brand-600 bg-brand-50">Services</a>
-          <a href="contact.html" class="block w-full text-center mt-4 bg-brand-600 text-white px-5 py-3 rounded-lg text-base font-medium">Get Free Demo</a>
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
+        <div class="px-4 pt-2 pb-6 space-y-2">
+          <a href="index.html" class="block px-4 py-3 rounded-lg text-base font-medium text-gray-700">Home</a>
+          <a href="services.html" class="block px-4 py-3 rounded-lg text-base font-bold text-brand-600 bg-brand-50">Services</a>
+          <a href="contact.html" class="block w-full text-center mt-4 bg-brand-600 text-white px-5 py-3.5 rounded-xl text-base font-bold">Get Free Demo</a>
         </div>
       </div>
     </nav>
 
-    <div class="pt-10 pb-20 flex-grow">
+    <!-- Header -->
+    <div class="bg-gray-900 py-16 text-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        <div class="max-w-4xl mx-auto px-4 relative z-10">
+           <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Services & Pricing</h1>
+           <p class="text-xl text-gray-300">Comprehensive digital solutions to help your institute grow.</p>
+        </div>
+    </div>
+
+    <div class="py-16 flex-grow">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center max-w-3xl mx-auto mb-16">
-           <h1 class="text-4xl font-bold text-gray-900 mb-4">Our Premium Services</h1>
-           <p class="text-xl text-gray-600">Comprehensive solutions designed specifically for educators, coaching institutes, and content creators.</p>
-        </div>
-
-        <!-- Service Grid -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <!-- LMS -->
-            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 flex flex-col">
-                <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-blue-50 text-blue-600">
-                   <i data-lucide="smartphone" class="w-7 h-7"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">White-Label LMS App</h3>
-                <p class="text-gray-600 mb-6 flex-grow">Your own branded academy app on Android, iOS, and Windows. Keep 100% of your earnings.</p>
-                <ul class="space-y-2 text-sm text-gray-700">
-                    <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Android + iOS + Web</li>
-                    <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Secure Live Classes</li>
-                </ul>
+        <!-- LMS Section -->
+        <div class="mb-20">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="p-3 bg-brand-100 rounded-lg"><i data-lucide="smartphone" class="w-8 h-8 text-brand-600"></i></div>
+                <h2 class="text-3xl font-bold text-gray-900">White-Label LMS App</h2>
             </div>
-            <!-- Graphic Designing -->
-            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 flex flex-col">
-                <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-pink-50 text-pink-600">
-                   <i data-lucide="palette" class="w-7 h-7"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Graphic Designing</h3>
-                <p class="text-gray-600 mb-6 flex-grow">Premium visuals for your institute. From high-CTR YouTube thumbnails to posters.</p>
-                <ul class="space-y-2 text-sm text-gray-700">
-                    <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> YouTube Thumbnails</li>
-                    <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Social Media Kits</li>
-                </ul>
-            </div>
-            <!-- Marketing -->
-            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 flex flex-col">
-                <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-orange-50 text-orange-600">
-                   <i data-lucide="megaphone" class="w-7 h-7"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Digital Marketing</h3>
-                <p class="text-gray-600 mb-6 flex-grow">Scale your institute with targeted Facebook & Google Ads.</p>
-                <ul class="space-y-2 text-sm text-gray-700">
-                    <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Lead Generation</li>
-                    <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Ad Campaign Setup</li>
-                </ul>
-            </div>
-            <!-- YouTube -->
-            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 flex flex-col">
-                <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-red-50 text-red-600">
-                   <i data-lucide="youtube" class="w-7 h-7"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">YouTube Management</h3>
-                <p class="text-gray-600 mb-6 flex-grow">Grow your subscriber base with professional editing and SEO.</p>
-                <ul class="space-y-2 text-sm text-gray-700">
-                    <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Video Editing</li>
-                    <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Channel SEO</li>
-                </ul>
-            </div>
-            <!-- Studio -->
-            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 flex flex-col">
-                <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-purple-50 text-purple-600">
-                   <i data-lucide="mic-2" class="w-7 h-7"></i>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Studio Setup</h3>
-                <p class="text-gray-600 mb-6 flex-grow">Transform your classroom into a high-tech hybrid studio.</p>
-                <ul class="space-y-2 text-sm text-gray-700">
-                    <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> 4K Camera Setup</li>
-                    <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Acoustic Treatment</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Detailed Section: Studio -->
-        <div class="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 mb-12">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Hybrid Class Studio Setup</h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Don't just teach online; provide a broadcast-quality experience. Our team visits your location to analyze acoustics and lighting needs. We provide a turnkey solution including:
+            <div class="grid md:grid-cols-2 gap-12 items-center bg-white p-8 rounded-3xl shadow-lg border border-gray-100">
+                <div class="space-y-6">
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        The ultimate solution for coaching institutes. You get a branded Android App, a Windows Desktop Application for PC users, and a responsive Website.
                     </p>
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-center gap-3"><span class="h-2 w-2 bg-brand-500 rounded-full"></span><span class="text-gray-700">Digital Smart Boards (65" to 86")</span></li>
-                        <li class="flex items-center gap-3"><span class="h-2 w-2 bg-brand-500 rounded-full"></span><span class="text-gray-700">Professional PTZ 4K Cameras</span></li>
-                        <li class="flex items-center gap-3"><span class="h-2 w-2 bg-brand-500 rounded-full"></span><span class="text-gray-700">Studio-grade Sennheiser/Rode Microphones</span></li>
-                        <li class="flex items-center gap-3"><span class="h-2 w-2 bg-brand-500 rounded-full"></span><span class="text-gray-700">Server Setup for low-latency streaming</span></li>
+                    <ul class="grid grid-cols-1 gap-3">
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500"></i> <span class="font-medium">Live Classes via Zoom Integration</span></li>
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500"></i> <span class="font-medium">Recorded Video Lectures (DRM Protected)</span></li>
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500"></i> <span class="font-medium">Online Tests & PDF Notes</span></li>
+                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500"></i> <span class="font-medium">Payment Gateway Integration (Razorpay/PhonePe)</span></li>
                     </ul>
-                    <a href="contact.html" class="text-brand-600 font-bold hover:text-brand-700 inline-flex items-center gap-1">Get a Studio Quote <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                    <div class="flex gap-4 pt-4">
+                        <div class="bg-brand-50 px-6 py-3 rounded-lg border border-brand-100">
+                            <span class="block text-xs text-brand-600 font-bold uppercase">Setup Cost</span>
+                            <span class="text-2xl font-bold text-gray-900">₹14,999</span>
+                        </div>
+                        <div class="bg-gray-50 px-6 py-3 rounded-lg border border-gray-100">
+                            <span class="block text-xs text-gray-500 font-bold uppercase">Yearly Renewal</span>
+                            <span class="text-2xl font-bold text-gray-900">₹11,999</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="rounded-2xl overflow-hidden h-[400px]">
-                    <img src="https://images.unsplash.com/photo-1598550476439-cce8bd2deb1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Professional Studio Setup" class="w-full h-full object-cover" />
+                <div>
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="LMS Interface" class="rounded-2xl shadow-xl w-full h-auto object-cover border-4 border-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
                 </div>
             </div>
+        </div>
+
+        <!-- Graphic Design Section (Detailed from GitHub link request) -->
+        <div class="mb-20">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="p-3 bg-pink-100 rounded-lg"><i data-lucide="palette" class="w-8 h-8 text-pink-600"></i></div>
+                <h2 class="text-3xl font-bold text-gray-900">Graphic Designing Services</h2>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Pack 1 -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="bg-pink-50 p-6 border-b border-pink-100">
+                        <h3 class="text-xl font-bold text-gray-900">Thumbnail Pack</h3>
+                        <p class="text-gray-500 text-sm mt-1">Boost your YouTube CTR</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-baseline mb-6">
+                           <span class="text-3xl font-bold text-gray-900">₹2,999</span>
+                           <span class="text-gray-500 ml-2">/ month</span>
+                        </div>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex gap-3 text-sm text-gray-700"><i data-lucide="check" class="w-5 h-5 text-pink-500"></i> 15 Custom Thumbnails</li>
+                            <li class="flex gap-3 text-sm text-gray-700"><i data-lucide="check" class="w-5 h-5 text-pink-500"></i> Source Files (PSD)</li>
+                            <li class="flex gap-3 text-sm text-gray-700"><i data-lucide="check" class="w-5 h-5 text-pink-500"></i> Unlimited Revisions</li>
+                        </ul>
+                        <a href="contact.html" class="block w-full py-2.5 rounded-lg border-2 border-pink-100 text-pink-600 font-bold text-center hover:bg-pink-50 transition-colors">Choose Plan</a>
+                    </div>
+                </div>
+
+                <!-- Pack 2 -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow relative">
+                    <div class="absolute top-0 right-0 bg-pink-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">Popular</div>
+                    <div class="bg-pink-50 p-6 border-b border-pink-100">
+                        <h3 class="text-xl font-bold text-gray-900">Social Media Kit</h3>
+                        <p class="text-gray-500 text-sm mt-1">Instagram & Facebook Growth</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-baseline mb-6">
+                           <span class="text-3xl font-bold text-gray-900">₹4,999</span>
+                           <span class="text-gray-500 ml-2">/ month</span>
+                        </div>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex gap-3 text-sm text-gray-700"><i data-lucide="check" class="w-5 h-5 text-pink-500"></i> 10 Instagram Reels Covers</li>
+                            <li class="flex gap-3 text-sm text-gray-700"><i data-lucide="check" class="w-5 h-5 text-pink-500"></i> 10 Post Designs / Carousel</li>
+                            <li class="flex gap-3 text-sm text-gray-700"><i data-lucide="check" class="w-5 h-5 text-pink-500"></i> Story Templates</li>
+                        </ul>
+                        <a href="contact.html" class="block w-full py-2.5 rounded-lg bg-pink-600 text-white font-bold text-center hover:bg-pink-700 transition-colors">Choose Plan</a>
+                    </div>
+                </div>
+
+                <!-- Pack 3 -->
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="bg-pink-50 p-6 border-b border-pink-100">
+                        <h3 class="text-xl font-bold text-gray-900">Institute Branding</h3>
+                        <p class="text-gray-500 text-sm mt-1">Complete Identity Setup</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-baseline mb-6">
+                           <span class="text-3xl font-bold text-gray-900">₹5,999</span>
+                           <span class="text-gray-500 ml-2">one-time</span>
+                        </div>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex gap-3 text-sm text-gray-700"><i data-lucide="check" class="w-5 h-5 text-pink-500"></i> Professional Logo Design</li>
+                            <li class="flex gap-3 text-sm text-gray-700"><i data-lucide="check" class="w-5 h-5 text-pink-500"></i> Visiting Card & Letterhead</li>
+                            <li class="flex gap-3 text-sm text-gray-700"><i data-lucide="check" class="w-5 h-5 text-pink-500"></i> 5 Course Promotion Posters</li>
+                        </ul>
+                        <a href="contact.html" class="block w-full py-2.5 rounded-lg border-2 border-pink-100 text-pink-600 font-bold text-center hover:bg-pink-50 transition-colors">Choose Plan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Studio & Marketing Grid -->
+        <div class="grid md:grid-cols-2 gap-8 mb-20">
+             <!-- Studio -->
+             <div class="bg-white rounded-2xl p-8 shadow-md border border-gray-100">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="bg-purple-100 p-2 rounded-lg"><i data-lucide="mic-2" class="w-6 h-6 text-purple-600"></i></div>
+                    <h3 class="text-2xl font-bold">Hybrid Studio Setup</h3>
+                </div>
+                <p class="text-gray-600 mb-6">
+                    Turnkey solution for hybrid classrooms. We handle hardware procurement, installation, and training.
+                </p>
+                <img src="https://images.unsplash.com/photo-1598550476439-cce8bd2deb1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Studio" class="w-full h-48 object-cover rounded-xl mb-6">
+                <a href="contact.html" class="text-purple-600 font-bold hover:underline flex items-center gap-1">Request Quote <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+             </div>
+
+             <!-- Marketing -->
+             <div class="bg-white rounded-2xl p-8 shadow-md border border-gray-100">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="bg-orange-100 p-2 rounded-lg"><i data-lucide="megaphone" class="w-6 h-6 text-orange-600"></i></div>
+                    <h3 class="text-2xl font-bold">Digital Marketing</h3>
+                </div>
+                <p class="text-gray-600 mb-6">
+                    Lead generation campaigns specifically for coaching institutes. Pay only for management fees + ad budget.
+                </p>
+                <img src="https://images.unsplash.com/photo-1557838923-2985c318be48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Marketing" class="w-full h-48 object-cover rounded-xl mb-6">
+                <a href="contact.html" class="text-orange-600 font-bold hover:underline flex items-center gap-1">Start Campaign <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+             </div>
         </div>
 
       </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white">
+    <!-- Footer (Consistent) -->
+    <footer class="bg-gray-900 text-white border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="text-center text-sm text-gray-500">&copy; 2024 TutorBhai. All rights reserved.</div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="space-y-4">
+              <div class="flex items-center gap-2">
+                <i data-lucide="book-open" class="w-6 h-6 text-brand-500"></i>
+                <span class="text-xl font-bold">TutorBhai</span>
+              </div>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Empowering educators to launch their own branded academies without technical hurdles.
+              </p>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold mb-4 text-white">Services</h3>
+              <ul class="space-y-2 text-gray-400 text-sm">
+                <li><a href="services.html" class="hover:text-brand-400">White-Label LMS</a></li>
+                <li><a href="services.html" class="hover:text-brand-400">Studio Setup</a></li>
+                <li><a href="services.html" class="hover:text-brand-400">Graphic Designing</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold mb-4 text-white">Legal</h3>
+              <ul class="space-y-2 text-gray-400 text-sm">
+                <li><a href="privacy.html" class="hover:text-brand-400">Privacy Policy</a></li>
+                <li><a href="terms.html" class="hover:text-brand-400">Terms & Conditions</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold mb-4 text-white">Contact</h3>
+              <ul class="space-y-3 text-gray-400 text-sm">
+                <li class="flex items-center gap-3"><i data-lucide="phone" class="w-4 h-4 text-brand-500"></i> +91 98765 43210</li>
+                <li class="flex items-center gap-3"><i data-lucide="mail" class="w-4 h-4 text-brand-500"></i> support@tutorbhai.com</li>
+              </ul>
+            </div>
+          </div>
+          <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
+            &copy; 2024 TutorBhai Solutions. All rights reserved.
+          </div>
         </div>
     </footer>
 
